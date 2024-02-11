@@ -1,0 +1,288 @@
+/*Begin custom properties*/
+@property --gradient-angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+:root {
+    /*Fonts;*/
+    --ff-site: 'K2D', sans-serif;
+
+    /*--fs-heading: max(3.55rem, calc(4.5vh));
+    --fs-subheading: max(2.0rem, calc(3.67vh));
+    --fs-body: max(1.1rem, calc(2.3vh));
+    --fs-button: max(1.1rem, calc(2.3vh));;
+    --fs-nav: max(1.2rem, calc(0.75*(2.0vh + 1.1vw)));*/
+
+    --fs-heading: 3rem;
+    --fs-subheading: 2.0rem;
+    --fs-body: 1.0rem;
+    --fs-nav: 1.0rem;
+
+    /*Colors*/
+    --clr-mainBG: #242424;
+    --clr-text: #FFFFFF;
+
+    /*Padding variables*/
+    --content-padding-top: 8%; /* 8% when large screen and 6% when medium or smaller*/
+    --content-padding-bottom: 8%;
+}
+/*End Custom Properties*/
+
+body{
+    background-color: var(--clr-mainBG);
+}
+
+/* Begin Main Container*/
+.main-container {
+    background-color: var(--clr-mainBG);
+    color: var(--clr-text);
+    position: relative;
+}
+
+.main-content {
+    border: 6px solid;
+    border-image: repeating-conic-gradient(from var(--gradient-angle), transparent 0deg,
+                            #BF9A40 5deg, #FFFFFF 40deg, transparent 75deg, transparent 180deg);
+    border-image-slice: 1;
+    animation: shimmy 5s ease-out 1 forwards;
+    position: relative;
+    padding-bottom: var(--content-padding-bottom);
+
+    /*For Nesthub max and bigger*/
+    /*repeating-conic-gradient(from var(--gradient-angle) ,
+                            transparent 10deg, #FFFFFF 40deg, #BF9A40 50deg, transparent 100deg, transparent 190deg);*/
+
+    /*For smaller devices*/
+    /*repeating-conic-gradient(from var(--gradient-angle), transparent 0deg,
+                            #BF9A40 5deg, #FFFFFF 40deg, transparent 75deg, transparent 180deg);*/
+}
+
+@keyframes shimmy {
+    0% {--gradient-angle: 0deg}
+    100% {--gradient-angle: 360deg}
+}
+/* End Main Container*/
+
+/*Begin Navigation Bar*/
+.navbar-nav .nav-item .nav-link{
+    font-family: var(--ff-site);
+    color: var(--clr-text);
+    font-size: var(--fs-nav);
+    font-weight: 300;
+}
+
+.navbar-nav .nav-item .active {
+    color: #BF9A40;
+}
+/*End Navigation Bar*/
+
+
+/*Begin Personal Info Div*/
+.personal-info-div {
+    padding-left: 25px;
+    padding-top: var(--content-padding-top);
+}
+
+/*.heading-div {
+    color: #FFFFFF;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 0% 100%;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(90deg, #BF9A40, #FFFFFF);
+    animation: heading-reveal 5s ease-out 1 forwards;
+}
+
+@keyframes heading-reveal {
+    to {
+        background-size: 100% 100%;
+    }
+}*/
+
+.heading-text {
+    font-family: var(--ff-site);
+    font-size: var(--fs-heading);
+    font-weight: 200;
+    color: var(--clr-text);
+}
+
+.intro-text {
+    font-family: var(--ff-site);
+    font-size: var(--fs-body);
+    font-weight: 200;
+}
+/*End Personal Info Div*/
+
+/*Spacer Div*/
+.spacer-div {
+    height: 6vh;
+}
+
+/*Begin Projects Links Div*/
+.projects-div {
+    padding-top: 8%;
+    z-index: 2;
+}
+
+.projects-heading-text {
+    font-family: var(--ff-site);
+    font-size: var(--fs-subheading);
+    font-weight: 200;
+    overflow-wrap: break-word;
+    color: var(--clr-text);
+}
+
+.links-row-div {
+    position:relative;
+    background-color: var(--clr-mainBG);
+    border-radius: 5;
+}
+
+.links-row-div::before,
+.links-row-div::after {
+    content: '';
+    position: absolute;
+    inset: -.1rem;
+    border-radius: inherit;
+    background: conic-gradient(from var(--gradient-angle),transparent 10deg, #FFFFFF 40deg, #BF9A40 50deg, transparent 100deg);
+    animation: rotation 6s linear infinite;
+    z-index: -1;
+}
+
+.links-row-div::after {
+    filter: blur(1rem)
+}
+
+@keyframes rotation {
+    0% {--gradient-angle: 0deg}
+    100% {--gradient-angle: 360deg}
+}
+
+.project-link-btn {
+    color: var(--clr-text);
+    border-bottom: 1px solid #BF9A40;
+    font-family: var(--ff-site);
+    font-size: var(--fs-body);
+    font-weight: 200;
+    border-radius: 2px;
+}
+
+.project-link-btn:hover {
+    color: #BF9A40;
+}
+/*End Projects Links Div*/
+
+
+/*Begin Media Queries*/
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    :root {
+        /*Font sizes*/
+        --fs-heading: 2.8rem;
+        --fs-subheading: 1.8rem;
+        --fs-body: 1.0rem;
+        --fs-nav: 1.0rem;
+
+        /*Padding variables*/
+        --content-padding-top: 0%; /* 8% when large screen and 6% when medium or smaller*/
+        --content-padding-bottom: 8%;
+    }
+}
+
+@media only screen and (min-width: 400px) {
+    :root {
+        /*Font sizes*/
+        --fs-nav: 1.6rem;
+        --fs-body: 1.25rem;
+
+        /*Padding variables*/
+        --content-padding-top: 2%; /* 8% when large screen and 6% when medium or smaller*/
+        --content-padding-bottom: 8%;
+    }
+}
+
+/* Extremely small devices (phones, 300px and down) */
+@media only screen and (max-width: 300px) {
+    :root {
+        /*Font sizes*/
+        --fs-heading: 2.5rem;
+        --fs-subheading: 1.6rem;
+        --fs-body: 1.0rem;
+
+        /*Padding variables*/
+        --content-padding-top: 0%; /* 8% when large screen and 6% when medium or smaller*/
+        --content-padding-bottom: 8%;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    :root {
+        --fs-heading: 4.0rem;
+        --fs-subheading: 2.8rem;
+        --fs-body: 1.15rem;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    :root {
+        /*Font sizes*/
+        --fs-heading: 4rem;
+        --fs-subheading: 2.8rem;
+        --fs-body: 1.6rem;
+        --fs-nav: 2rem;
+
+        /*Padding*/
+        --content-padding-top: 3%;
+        --content-padding-bottom: 8%;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    :root {
+        /*Font sizes*/
+        --fs-heading: 4rem;
+        --fs-subheading: 2.5rem;
+        --fs-body: 1.1rem;
+        --fs-nav: 1.4rem;
+
+        /*Padding*/
+        --content-padding-top: 8%;
+        --content-padding-bottom: 8%;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    :root {
+        --fs-heading: 4.0rem;
+        --fs-subheading: 2.5rem;
+        --fs-body: 1.1rem;
+    }
+
+    .main-content {
+        border-width: 8px;
+        border-image-source: repeating-conic-gradient(from var(--gradient-angle) ,
+                            transparent 10deg, #FFFFFF 40deg, #BF9A40 50deg, transparent 100deg, transparent 190deg);
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1000px and up and large height) */
+@media only screen and (min-width: 1000px) and (min-height: 1360px) {
+    :root {
+        --fs-heading: 6.0rem;
+        --fs-subheading: 3.0rem;
+        --fs-body: 2.1rem;
+        --fs-nav: 2.0rem;
+    }
+
+    /*Projects and links div*/
+    .links-row-div {
+        width: 100%;
+    }
+}
+/*End Media Queries*/

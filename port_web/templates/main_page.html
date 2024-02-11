@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+<div class="container-fluid main-content pt-3 mb-3">
+    <div class="row">
+        <div class="col-12 col-lg-6 d-flex align-items-center justify-content-center personal-info-div ">
+            <div class="row">
+                <div class="col-12 heading-div mb-4">
+                    <h1 class="heading-text">Malone K Napier-Jameson.</h1>
+                </div>
+                <div class="col-12 intro-text-div">
+                    <p class="intro-text">
+                        I am a B.Sc. Computing student and aspiring software developer based in Johannesburg,
+                        South Africa. I have created many projects ranging from web applications to desktop
+                        and android applications. I am very passionate about software development.
+                    </p>
+                    <p class="intro-text">
+                        I am very adaptable and always willing to learn new things and improve my skillset.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-lg-1 spacer-div "><br><br><br></div>
+        <div class="col-12 col-lg-5 projects-div ">
+            <div class="row projects-div-row">
+                <div class="col-2"></div>
+                <div class="col-6">
+                    <div class="row d-flex align-items-center">
+                        <div class="col-12 projects-heading-div pb-1">
+                            <h1 class="projects-heading-text">Projects</h1>
+                        </div>
+                        <div class="col-11 links-row-div">
+                            <div class="row">
+                                <div class="col-12"><a class="btn project-link-btn my-2" href="#">Wordsmith</a></div>
+                                <div class="col-12"><a class="btn project-link-btn my-2" href="#">EC Automata</a></div>
+                                <div class="col-12"><a class="btn project-link-btn my-2" href="#">Steak Nation</a></div>
+                                <div class="col-12"><a class="btn project-link-btn my-2"
+                                                       href="{{ url_for('project_page', project_title='journal_by_topic') }}">Journal By Topic</a></div>
+                                <div class="col-12"><a class="btn project-link-btn my-2" href="#">TM Simulator</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4"></div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

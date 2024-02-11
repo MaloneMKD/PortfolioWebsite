@@ -1,0 +1,44 @@
+/*Begin Project Title*/
+.project-title {
+    font-family: var(--ff-heading);
+    font-size: var(--fs-heading);
+    font-weight: 200;
+}
+/*End Project Title*/
+
+/*Begin Links Section*/
+.link-btn {
+    width: 100%;
+    background-color: #BF9A40;
+    color: #FFFFFF;
+}
+
+.link-btn:hover {
+    background-color: transparent;
+    color:  #BF9A40;
+}
+/*End Links Section*/
+
+/*Begin About Project Section*/
+.about-text {
+    font-family: var(--ff-body);
+    font-size: var(--fs-body);
+    font-weight: 200;
+}
+/*End About Project Section*/
+
+/*Begin images section*/
+.carousel{
+    /*width: 60%;*/
+}
+
+.carousel-control-next,
+.carousel-control-prev  {
+    filter: invert(100%);
+}
+
+.carousel-control-next:hover,
+.carousel-control-prev:hover  {
+    filter: invert(20%);
+}
+/*End images section*/

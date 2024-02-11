@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+<div class="container-fluid about-main-content pt-3 mb-3">
+    <div class="row">
+        <div class="col-12 page-title-div text-center pt-3 pb-4">
+            <h1 class="project-title">{{ project_data["title"] }}</h1>
+        </div>
+        <div class="col-12 project-links-div d-flex justify-content-center">
+            <div class="row">
+                <div class="col">
+                    <div class="row">
+                        <div class="col-12"><p class=" text-center">Github</p></div>
+                        <div class="col-12"><a class="btn link-btn" href="{{ project_data['github_link'] }}">Code</a></div>
+                    </div>
+                </div>
+                {% for dict in project_data["setup_links"] %}
+                <div class="col">
+                    <div class="row">
+                        <div class="col-12"><p class="text-center">{{ dict["os"] }}</p></div>
+                        <div class="col-12"><a class="btn link-btn" href="{{ dict['link'] }}">Download</a></div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="col-12 images-div d-flex border justify-content-center">
+            <div id="projectImagesCarousel" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#projectImagesCarousel" data-slide-to="0" class="active"></li>
+                    {% for i in range(1, project_data['image_names']|length) %}
+                    <li data-target="#projectImagesCarousel" data-slide-to="{{ i }}"></li>
+                    {% endfor %}
+                </ol>
+                <div class="carousel-inner">
+                    {% for i in range(project_data['image_names']|length) %}
+                        {% if i == 0 %}
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src="{{ url_for('static', filename='images/' + project_data['images_folder_name']
+                                                               + '/' + project_data['image_names'][i]) }}">
+                        </div>
+                        {% else %}
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="{{ url_for('static', filename='images/' + project_data['images_folder_name']
+                                                               + '/' + project_data['image_names'][i]) }}">
+                        </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+                <a class="carousel-control-prev" href="#projectImagesCarousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#projectImagesCarousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+        <div class="col-12 about-project-div pt-5">
+            <div class="row d-flex justify-content-center text-center">
+                {% for paragraph in project_data["about_list"] %}
+                <div class="col-8"><p class="about-text"> {{ paragraph }} </p></div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="col-12 pb-3"></div>
+    </div>
+</div>
+{% endblock %}
