@@ -18,10 +18,19 @@ journal_by_topic = {
     "image_names": getImageNames("JBTPics"),
     "about_list": ["Journal By Topic is a journaling application.",
                    "In the app, you can create a journal that can be password protected and create entries inside each"
-                   "journal using the built in text editor. Entries are saved as encrypted files and each journal (or"
-                   "topic) has a unique ID that each entry inherits and thus entries can only be accessed through"
-                   "their parent journal, ensuring security."],
-    "tech_list": ["Python", "PyQT"]
+                   " journal using the built in text editor. Entries are saved as encrypted files and each journal (or"
+                   " topic) has a unique ID that each entry inherits and thus entries can only be accessed through"
+                   " their parent journal, ensuring security."],
+    "tech_list": [
+        {
+            "lang": "Python",
+            "techs": "PyQT"
+        },
+        {
+            "lang": "Python",
+            "techs": "PySide6, Flet, Flask, Selenium, Joblib"
+        }
+    ]
 }
 
 if __name__ == "__main__":

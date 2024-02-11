@@ -9,84 +9,12 @@
 }
 /*End Custom Properties*/
 
-/*Begin Media Queries*/
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-    :root {
-        /*Font sizes*/
-        --fs-subtitle: 1.3rem;
-        --fs-form-label: 1.0rem;
-        --self-img-height: 20.5rem;
-    }
-}
-
-@media only screen and (min-width: 400px) {
-    :root {
-        /*Font sizes*/
-        --fs-subtitle: 1.7rem;
-        --fs-form-label: 1.2rem;
-        --self-img-height: 23.5rem;
-    }
-}
-
-/* Extremely small devices (phones, 300px and down) */
-@media only screen and (max-width: 300px) {
-    :root {
-        /*Font sizes*/
-        --fs-subtitle: 1.1rem;
-        --fs-form-label: 0.8rem;
-        --self-img-height: 17.5rem;
-    }
-}
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-    :root {
-        --fs-subtitle: 2.1rem;
-        --fs-form-label: 1rem;
-    }
-}
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-    :root {
-        /*Font sizes*/
-        --fs-form-label: 1.8rem;
-        --self-img-height: 28.5rem;
-    }
-}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-    :root {
-        /*Font sizes*/
-        --fs-subtitle: 1.6rem;
-        --fs-form-label: 1.1rem;
-    }
-}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-    :root {
-    --fs-subtitle: 2.1rem;
-    }
-}
-
-/* Extra large devices (large laptops and desktops, 1000px and up and large height) */
-@media only screen and (min-width: 1000px) and (min-height: 1360px) {
-    :root {
-        --fs-subtitle: 2.5rem;
-        --fs-form-label: 2rem;
-    }
-}
-/*End Media Queries*/
-
 /*Begin Main Content*/
 .about-main-content {
-    border-top: 8px solid;
-    border-bottom: 8px solid;
-    border-image-source: repeating-conic-gradient(from var(--gradient-angle) ,
-                            transparent 10deg, #FFFFFF 40deg, #BF9A40 50deg, transparent 100deg, transparent 190deg);
+    border-top: 4px solid;
+    border-bottom: 4px solid;
+    border-image-source: repeating-conic-gradient(from var(--gradient-angle), transparent 0deg,
+                            #BF9A40 5deg, #FFFFFF 40deg, transparent 75deg, transparent 180deg);
     border-image-slice: 1;
     animation: about-shimmy 5s ease-out 1 forwards;
     position: relative;
@@ -171,3 +99,79 @@
     font-weight: 200;
 }
 /*End Contact Div*/
+
+/*Begin Media Queries*/
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    :root {
+        /*Font sizes*/
+        --fs-subtitle: 1.3rem;
+        --fs-form-label: 1.0rem;
+        --self-img-height: 20.5rem;
+    }
+}
+
+@media only screen and (min-width: 400px) {
+    :root {
+        /*Font sizes*/
+        --fs-subtitle: 1.7rem;
+        --fs-form-label: 1.2rem;
+        --self-img-height: 23.5rem;
+    }
+}
+
+/* Extremely small devices (phones, 300px and down) */
+@media only screen and (max-width: 300px) {
+    :root {
+        /*Font sizes*/
+        --fs-subtitle: 1.1rem;
+        --fs-form-label: 0.8rem;
+        --self-img-height: 17.5rem;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    :root {
+        --fs-subtitle: 2.1rem;
+        --fs-form-label: 1rem;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    :root {
+        /*Font sizes*/
+        --fs-form-label: 1.8rem;
+        --self-img-height: 28.5rem;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    :root {
+        /*Font sizes*/
+        --fs-subtitle: 1.6rem;
+        --fs-form-label: 1.1rem;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    :root {
+    --fs-subtitle: 2.1rem;
+    }
+
+    .about-main-content {
+        border-width: 8px;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1000px and up and large height) */
+@media only screen and (min-width: 1000px) and (min-height: 1360px) {
+    :root {
+        --fs-subtitle: 2.5rem;
+        --fs-form-label: 2rem;
+    }
+}
+/*End Media Queries*/
