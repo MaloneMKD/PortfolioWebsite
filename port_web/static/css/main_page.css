@@ -9,16 +9,9 @@
     /*Fonts;*/
     --ff-site: 'K2D', sans-serif;
 
-    /*--fs-heading: max(3.55rem, calc(4.5vh));
-    --fs-subheading: max(2.0rem, calc(3.67vh));
-    --fs-body: max(1.1rem, calc(2.3vh));
-    --fs-button: max(1.1rem, calc(2.3vh));;
-    --fs-nav: max(1.2rem, calc(0.75*(2.0vh + 1.1vw)));*/
-
     --fs-heading: 3rem;
     --fs-subheading: 2.0rem;
     --fs-body: 1.0rem;
-    --fs-nav: 1.0rem;
 
     /*Colors*/
     --clr-mainBG: #242424;
@@ -69,7 +62,7 @@ body{
 .navbar-nav .nav-item .nav-link{
     font-family: var(--ff-site);
     color: var(--clr-text);
-    font-size: var(--fs-nav);
+    font-size: var(--fs-body);
     font-weight: 300;
 }
 
@@ -84,22 +77,6 @@ body{
     padding-left: 25px;
     padding-top: var(--content-padding-top);
 }
-
-/*.heading-div {
-    color: #FFFFFF;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-size: 0% 100%;
-    background-repeat: no-repeat;
-    background-image: linear-gradient(90deg, #BF9A40, #FFFFFF);
-    animation: heading-reveal 5s ease-out 1 forwards;
-}
-
-@keyframes heading-reveal {
-    to {
-        background-size: 100% 100%;
-    }
-}*/
 
 .heading-text {
     font-family: var(--ff-site);
@@ -183,7 +160,6 @@ body{
         --fs-heading: 2.8rem;
         --fs-subheading: 1.8rem;
         --fs-body: 1.0rem;
-        --fs-nav: 1.0rem;
 
         /*Padding variables*/
         --content-padding-top: 0%; /* 8% when large screen and 6% when medium or smaller*/
@@ -194,7 +170,6 @@ body{
 @media only screen and (min-width: 400px) {
     :root {
         /*Font sizes*/
-        --fs-nav: 1.6rem;
         --fs-body: 1.25rem;
 
         /*Padding variables*/
@@ -233,7 +208,6 @@ body{
         --fs-heading: 4rem;
         --fs-subheading: 2.8rem;
         --fs-body: 1.6rem;
-        --fs-nav: 2rem;
 
         /*Padding*/
         --content-padding-top: 3%;
@@ -248,7 +222,6 @@ body{
         --fs-heading: 4rem;
         --fs-subheading: 2.5rem;
         --fs-body: 1.1rem;
-        --fs-nav: 1.4rem;
 
         /*Padding*/
         --content-padding-top: 8%;
@@ -267,7 +240,7 @@ body{
     .main-content {
         border-width: 8px;
         border-image-source: repeating-conic-gradient(from var(--gradient-angle) ,
-                            transparent 10deg, #FFFFFF 40deg, #BF9A40 50deg, transparent 100deg, transparent 190deg);
+                            transparent 10deg, #EEB76B 40deg, #BF9A40 50deg, transparent 100deg, transparent 190deg);
     }
 }
 
@@ -277,7 +250,6 @@ body{
         --fs-heading: 6.0rem;
         --fs-subheading: 3.0rem;
         --fs-body: 2.1rem;
-        --fs-nav: 2.0rem;
     }
 
     /*Projects and links div*/

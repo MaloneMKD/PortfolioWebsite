@@ -15,7 +15,8 @@
                         and android applications. I am very passionate about software development.
                     </p>
                     <p class="intro-text">
-                        I am very adaptable and always willing to learn new things and improve my skillset.
+                        I am very adaptable and always willing to learn new things and improve my skillset. Take a
+                        look at my projects which include this very site.
                     </p>
                 </div>
             </div>
@@ -31,12 +32,16 @@
                         </div>
                         <div class="col-11 links-row-div">
                             <div class="row">
-                                <div class="col-12"><a class="btn project-link-btn my-2" href="#">Wordsmith</a></div>
-                                <div class="col-12"><a class="btn project-link-btn my-2" href="#">EC Automata</a></div>
-                                <div class="col-12"><a class="btn project-link-btn my-2" href="#">Steak Nation</a></div>
+                                <div class="col-12"><a class="btn project-link-btn my-2"
+                                                       href="{{ url_for('project_page', project_title='wordsmith') }}">Wordsmith</a></div>
+                                <div class="col-12"><a class="btn project-link-btn my-2"
+                                                       href="{{ url_for('project_page', project_title='eca') }}">EC Automata</a></div>
+                                <div class="col-12"><a class="btn project-link-btn my-2"
+                                                       href="{{ url_for('project_page', project_title='steak_nation') }}">Steak Nation</a></div>
                                 <div class="col-12"><a class="btn project-link-btn my-2"
                                                        href="{{ url_for('project_page', project_title='journal_by_topic') }}">Journal By Topic</a></div>
-                                <div class="col-12"><a class="btn project-link-btn my-2" href="#">TM Simulator</a></div>
+                                <div class="col-12"><a class="btn project-link-btn my-2"
+                                                       href="{{ url_for('project_page', project_title='tms') }}">TM Simulator</a></div>
                             </div>
                         </div>
                     </div>

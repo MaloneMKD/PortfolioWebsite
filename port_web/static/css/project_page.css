@@ -1,3 +1,17 @@
+/*Begin Navigation Links*/
+.navigation-link {
+    background-color: transparent;
+    color: #FFFFFF;
+    font-size: 2rem;
+}
+
+.navigation-link:hover {
+    background-color: transparent;
+    color:  #BF9A40;
+}
+
+/*End Navigation Links*/
+
 /*Begin Project Title*/
 .project-title {
     font-family: var(--ff-heading);
@@ -20,8 +34,8 @@
 /*End Links Section*/
 
 /*Begin About Project Section*/
-.about-text {
-    font-family: var(--ff-body);
+.reg-text {
+    font-family: var(--ff-site);
     font-size: var(--fs-body);
     font-weight: 200;
 }
@@ -30,6 +44,10 @@
 /*Begin images section*/
 .carousel{
     width: 100%;
+}
+
+.carousel-indicators {
+    filter: invert(100%);
 }
 
 .carousel-control-next,
@@ -42,3 +60,26 @@
     filter: invert(20%);
 }
 /*End images section*/
+
+/*Begin Text Section*/
+.subheading-text {
+    font-size: var(--fs-subtitle);
+    font-family: var(--ff-site);
+    font-weight: 200;
+}
+
+.lang-col {
+    background-color: #BF9A40;
+    color: #FFFFFF;
+    border-radius: 5px;
+}
+/*End Text Section*/
+
+/*Begin Media Queries*/
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .carousel{
+        width: 1200px;
+    }
+}
+/*End Media Queries*/

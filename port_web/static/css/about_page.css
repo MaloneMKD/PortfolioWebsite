@@ -66,6 +66,7 @@
 .self-img {
     /*height: 450px;*/
     height: var(--self-img-height);
+    opacity: 0.85;
 }
 /*End Info-Skills Div*/
 
