@@ -2,6 +2,8 @@ from flask import render_template, redirect, url_for, flash, send_file
 from port_web.forms import ContactForm
 from port_web import app, db
 from port_web.models import Messages
+from port_web import mail
+from flask_mail import Message
 from projects_data import *
 
 
@@ -18,8 +20,23 @@ def about_page():
         message = Messages(name=form.name.data,
                            email=form.email.data,
                            message=form.message.data)
+
+        # Save message to database
         db.session.add(message)
         db.session.commit()
+
+        # Send email to notify about comment
+        msg = Message(f"Comment On Portfolio Website by: {form.name.data}",
+                      sender="malone.mkd.makoto@gmail.com",
+                      recipients=["MK.Napier-Jameson@outlook.com"])
+        # msg.body = f"Message By: {form.name.data}\nEmail: {form.email.data}\n\nMessage:{form.message.data}"
+        msg.html = f"""
+                       <h4>Name:</h4><i>{form.name.data}</i>
+                       <h4>Email:</h4><i>{form.email.data}</i>
+                       <h4>Message:</h4><i>{form.message.data}</i>
+                    """
+        mail.send(msg)
+
         flash(f'Message submitted successfully!', 'success')
         return redirect(url_for('about_page'))
 
