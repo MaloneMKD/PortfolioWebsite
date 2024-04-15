@@ -68,9 +68,9 @@ tms = {
     ],
     "images_folder_name": "TMPics",
     "image_names": get_image_names("TMPics"),
-    "about_list": ["Truing Machine Simulator is a simulation application.",
+    "about_list": ["Turing Machine Simulator is a simulation application.",
                    "This application allows you to design a Turing Machine on the canvas and test your input on the machine."
-                   " Once you finish designing, you press the build button and the application wil make a logical TM behing the scenes that you can "
+                   " Once you finish designing, you press the build button and the application wil make a logical TM behind the scenes that you can "
                    " test input on. On building, the application also creates a transition table that you can view on the summary page. ",
                    "When testing input, the application will demostrate the execution of the input by highlighting the current state and "
                    "moving the tape head to the current letter being read or written to. "
@@ -79,7 +79,7 @@ tms = {
                    "Once designed, you can save a TM and be able to reload it any time. This allows for backups and sharing."
                    " The TMs are saved as xml files. The program also includes checks to prevent infinite loops and provides a "
                    "warning if possible infinite loops are detected.",
-                   "This program was created with computer science student in mind, to help them visualize theoretical concepts "
+                   "This program was created with computer science students in mind, to help them visualize theoretical concepts "
                    "and make understanding these concepts easier."],
     "tech_list": ["C++: Qt"],
     "prev_project": "journal_by_topic",
