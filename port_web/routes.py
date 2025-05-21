@@ -66,6 +66,6 @@ def download(setup_name):
     elif setup_name == 'Turing Machine Simulator':
         return send_file("static/downloads/TMSInstaller.exe", as_attachment=True)
     elif setup_name == 'Wordsmith':
-        return send_file("static/downloads/wordsmith.apk", as_attachment=True)
+        return send_file("static/downloads/equinox.wordsmith.apk", as_attachment=True)
     elif setup_name == 'Elementary Cellular Automata':
         return send_file("static/downloads/Elementary Cellular Automata.zip", as_attachment=True)

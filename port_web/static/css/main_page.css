@@ -25,23 +25,35 @@
 
 body{
     background-color: var(--clr-mainBG);
+    height: 100vh;
+    /*background-color: black;
+    background-image: url('../images/background_image.jpg');
+    background-repeat:no-repeat;
+    background-size:contain;
+    background-position:center;*/
 }
 
 /* Begin Main Container*/
 .main-container {
-    background-color: var(--clr-mainBG);
+    /*background-color: var(--clr-mainBG);*/
+    background-color: transparent;
     color: var(--clr-text);
     position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .main-content {
-    border: 6px solid;
+    border: 5px solid;
     border-image: repeating-conic-gradient(from var(--gradient-angle), transparent 0deg,
                             #BF9A40 5deg, #FFFFFF 40deg, transparent 75deg, transparent 180deg);
     border-image-slice: 1;
     animation: shimmy 5s ease-out 1 forwards;
     position: relative;
-    padding-bottom: var(--content-padding-bottom);
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
 
     /*For Nesthub max and bigger*/
     /*repeating-conic-gradient(from var(--gradient-angle) ,
@@ -50,6 +62,10 @@ body{
     /*For smaller devices*/
     /*repeating-conic-gradient(from var(--gradient-angle), transparent 0deg,
                             #BF9A40 5deg, #FFFFFF 40deg, transparent 75deg, transparent 180deg);*/
+}
+
+.content-row-div {
+    flex-grow: 1;
 }
 
 @keyframes shimmy {
@@ -99,8 +115,11 @@ body{
 
 /*Begin Projects Links Div*/
 .projects-div {
-    padding-top: 8%;
     z-index: 2;
+}
+
+.projects-div-row{
+    height: 100%
 }
 
 .projects-heading-text {
@@ -114,7 +133,8 @@ body{
 .links-row-div {
     position:relative;
     background-color: var(--clr-mainBG);
-    border-radius: 5;
+   /* background-image: url('../images/background_image.jpg');
+    border-radius: 5;*/
 }
 
 .links-row-div::before,

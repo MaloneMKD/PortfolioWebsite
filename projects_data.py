@@ -113,7 +113,7 @@ steak_nation = {
 wordsmith = {
     "title": "Wordsmith",
     "subtitle": "Poetry application.",
-    "github_link": "https://github.com/MaloneMKD/Wordsmith.git",
+    "github_link": "https://github.com/MaloneMKD/Wordsmith-CSharp.git",
     "setup_links": [
         {
             "os": "Android",
@@ -124,11 +124,10 @@ wordsmith = {
     "image_names": get_image_names("WSPics"),
     "about_list": ["Wordsmith is an application for poets.",
                    "This application allows the user to write poetry and save it. Poems are saved in a SQLite database. "
-                   "The app has a grid and list view that are daptable to different screen sizes. Poems have tags that can"
-                   " be used for searching and filtering.",
+                   "The app can adapt to light mode and dark mode according to the system settings.",
                    "The application has a 'Rhyme Utility' that uses an api to get all words that rhyme with the word requested,"
                    " and filters to only return perfect rhymes."],
-    "tech_list": ["Python: Flet, SQLAlchemy, SQLite"],
+    "tech_list": ["C#: .Net, Maui, SQLite"],
     "prev_project": None,
     "next_project": "eca"
 }
