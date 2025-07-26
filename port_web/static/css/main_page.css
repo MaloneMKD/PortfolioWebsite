@@ -45,7 +45,7 @@ body{
 }
 
 .main-content {
-    border: 5px solid;
+    border: 6px solid;
     border-image: repeating-conic-gradient(from var(--gradient-angle), transparent 0deg,
                             #BF9A40 5deg, #FFFFFF 40deg, transparent 75deg, transparent 180deg);
     border-image-slice: 1;
@@ -223,6 +223,11 @@ body{
         --fs-subheading: 2.8rem;
         --fs-body: 1.15rem;
     }
+
+    .main-content {
+        border-width: 8px;
+        border-image-source: repeating-conic-gradient(from var(--gradient-angle) ,
+                            transparent 10deg, #EEB76B 40deg, #BF9A40 50deg, transparent 100deg, transparent 190deg);
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -236,6 +241,11 @@ body{
         /*Padding*/
         --content-padding-top: 3%;
         --content-padding-bottom: 8%;
+
+        .main-content {
+        border-width: 10px;
+        border-image-source: repeating-conic-gradient(from var(--gradient-angle) ,
+                            transparent 10deg, #EEB76B 40deg, #BF9A40 50deg, transparent 100deg, transparent 190deg);
     }
 }
 
@@ -260,12 +270,6 @@ body{
         --fs-subheading: 2.5rem;
         --fs-body: 1.1rem;
     }
-
-    .main-content {
-        border-width: 8px;
-        border-image-source: repeating-conic-gradient(from var(--gradient-angle) ,
-                            transparent 10deg, #EEB76B 40deg, #BF9A40 50deg, transparent 100deg, transparent 190deg);
-    }
 }
 
 /* Extra large devices (large laptops and desktops, 1000px and up and large height) */
@@ -274,6 +278,12 @@ body{
         --fs-heading: 6.0rem;
         --fs-subheading: 3.0rem;
         --fs-body: 2.1rem;
+    }
+
+    .main-content {
+        border-width: 15px;
+        border-image-source: repeating-conic-gradient(from var(--gradient-angle) ,
+                            transparent 10deg, #EEB76B 40deg, #BF9A40 50deg, transparent 100deg, transparent 190deg);
     }
 
     /*Projects and links div*/
